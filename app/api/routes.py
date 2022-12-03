@@ -14,7 +14,7 @@ def create_contact(current_user_token):
     name = request.json['name']
     type = request.json['type']
     price = request.json['price']
-    ingredient = request.json['ingredient']
+    ingredients = request.json['ingredients']
     user_token = current_user_token.token
 
     print(f'BIG TESTER: {current_user_token.token}')
@@ -49,7 +49,7 @@ def update_drink(current_user_token,id):
     contact.name = request.json['name']
     contact.type = request.json['type']
     contact.price = request.json['price']
-    contact.ingredient = request.json['ingredient']
+    contact.ingredients = request.json['ingredients']
     contact.user_token = current_user_token.token
 
     db.session.commit()
